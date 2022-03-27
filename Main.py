@@ -5,6 +5,10 @@ class Node:
         self.right = None
 
     def insert_node(self, value):
+        """
+        Insert to the left of parent Node if the given value is smaller, otherwise the opposite.
+        """
+
         if value < self.value:
             self.left = Node(value)
         else:
@@ -16,6 +20,10 @@ class Tree:
         self.root = Node(value)
 
     def pre_order(self, root):
+        """
+        print, left, right
+        """
+
         if root is None:
             return
 
@@ -26,6 +34,10 @@ class Tree:
         self.pre_order(root.right)
 
     def in_order(self, root):
+        """
+        left, print, right
+        """
+
         if root is None:
             return
 
@@ -36,6 +48,10 @@ class Tree:
         self.in_order(root.right)
 
     def post_order(self, root):
+        """
+        left, right, print
+        """
+
         if root is None:
             return
 
